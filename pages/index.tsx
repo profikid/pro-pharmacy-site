@@ -1,11 +1,11 @@
-import { Inter, Source_Serif_Pro } from 'next/font/google'
+import { Inter, Source_Serif_4 } from 'next/font/google'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Shield, Truck, Smartphone, Pill, Syringe, Clock, CheckCircle2 } from 'lucide-react'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const sourceSerif = Source_Serif_Pro({ 
+const sourceSerif = Source_Serif_4({ 
   subsets: ['latin'], 
   weight: ['400', '600'],
   variable: '--font-serif' 
