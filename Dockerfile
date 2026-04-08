@@ -11,7 +11,8 @@ ENV NODE_ENV production
 COPY --from=builder /app/package*.json ./
 RUN npm ci --only=production
 COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
+# Note: public directory is optional, skip if not present
+COPY --from=builder /app/public ./public || true
 COPY --from=builder /app/node_modules ./node_modules
 EXPOSE 3000
 CMD ["npm", "start"]
